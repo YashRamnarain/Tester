@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "21914397_Ramnarain_Yasvhir_Assignment_1/1.0.0": {
+        "runtime": {
+          "21914397_Ramnarain_Yasvhir_Assignment_1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "21914397_Ramnarain_Yasvhir_Assignment_1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

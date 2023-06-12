@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Meal Selection Confirmation";
+}
+<h1>@ViewData["Title"]</h1>
+
+<h2>Meal Combo: @Model.Food + @Model.Drink</h2>
+<h2>Price: R @Model.Price</h2>
+<img width="850" height=auto src="@Model.Image" alt="Image" />
+<p></p>
+
+
+<table>
+    <tr>
+        <td>
+            <form method="post" asp-action="Index">
+                <input class="btn btn-primary" type="submit" value="Return" />
+            </form>
+        </td>
+        <td></td>
+        <td>
+            <form method="post" asp-action="ResetPlan">
+                <input class="btn btn-primary" type="submit" value="Clear and Return" />
+            </form>
+        </td>
+    </tr>
+</table>
+

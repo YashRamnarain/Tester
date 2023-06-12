@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<_21914397_Ramnarain_Yasvhir_Assignment_1.Models.MealPlan>
+
+<h1>Select a Meal Plan</h1>
+
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
+<form method="post" asp-action="SelectMealPlan">
+    <table class="table">
+        <thead>
+            <tr class="mainHead">
+                <th class="mainColumn"> </th>
+                <th class ="mainColumn">Image</th>
+                <th class="mainColumn">Food</th>
+                <th class="mainColumn">Drink</th>
+                <th class="mainColumn">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var plan in Model)
+            {
+                <tr>
+                    <td><input class = "radio" type="radio" name="id" value="@plan.Id"/></td>
+                    <td><img width="300" height=auto src="@plan.Image" alt="Image"/></td>
+                    <td>@plan.Food</td>
+                    <td>@plan.Drink</td>
+                    <td>@plan.Price.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <input class="btn btn-primary" type="submit" value="Submit" />
+</form>
